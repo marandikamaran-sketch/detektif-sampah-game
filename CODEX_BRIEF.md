@@ -3,7 +3,7 @@
 Anda sedang mengembangkan proyek edukasi **Detektif Sampah — Misi Pilah 1.000**. Baca README.md dan seluruh `src/game/*` sebelum mengubah kode.
 
 ## Tujuan produk
-Game 2D berbasis web untuk siswa SMP/MTs dan layar sentuh PID. Pemain memilah objek yang turun dari atas ke 3 wadah: Hijau/Organik, Kuning/Anorganik, Merah/B3. Semua istilah utama dan daftar contoh mengikuti materi pembelajaran sekolah; jika materi diubah, perbarui katalog dan teks penjelasan secara konsisten.
+Game 2D berbasis web untuk siswa SMP/MTs dan layar sentuh PID. Gunakan logo sekolah dari `public/logo.jpg`, latar antarmuka biru muda langit, dan tiga wadah yang diberi nama Organik (hijau), Anorganik (kuning), serta Sampah B3 (merah). Nama pada label wadah harus nama kategori, bukan nama warna. Semua istilah utama dan daftar contoh mengikuti materi pembelajaran sekolah; jika materi diubah, perbarui katalog dan teks penjelasan secara konsisten.
 
 ## Kontrak teknis
 - Tetap gunakan Vite + JavaScript ES Modules agar kompatibel dengan deployment statis Vercel.

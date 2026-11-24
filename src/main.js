@@ -6,9 +6,9 @@ const root = document.querySelector('#app');
 root.innerHTML = `
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="Detektif Sampah beranda">
-        <span class="brand-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 28c0-12 12-19 27-18-1 14-8 27-21 25-7-1-10-7-6-13 3-4 7-6 12-7-6 4-9 9-8 14 7 0 13-4 18-12-5 5-11 7-18 7" fill="currentColor"/><path d="M14 35c-2 4-4 7-7 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></svg></span>
-        <span class="brand-copy"><strong>ECO<span>QUEST</span></strong><small>MEDIA BELAJAR INTERAKTIF</small></span>
+      <a class="brand" href="#top" aria-label="SMP IT Sahabat Alam — Detektif Sampah">
+        <img class="school-logo" src="/logo.jpg" alt="Logo SMP IT Sahabat Alam" />
+        <span class="brand-copy"><strong>SMP IT SAHABAT ALAM</strong><small>MEDIA PEMBELAJARAN INTERAKTIF</small></span>
       </a>
       <div class="top-actions">
         <span class="touch-pill"><span class="touch-dots">●●●</span> MULTI-TOUCH PID</span>
@@ -42,7 +42,7 @@ root.innerHTML = `
             <div class="scene-name"><span class="live-indicator"></span><div><strong>AREA MISI PILAH</strong><small>HALAMAN SEKOLAH • ZONA SORTIR</small></div></div>
             <div class="scene-actions"><span id="wave-label" class="wave-chip">GELOMBANG 0 / 56</span><button id="pause-toggle" class="pause-button" type="button" disabled>Ⅱ Jeda</button></div>
           </div>
-          <div class="canvas-wrap"><canvas id="game-canvas" aria-label="Area permainan memilah sampah. Seret objek ke tempat sampah yang sesuai."></canvas><div class="canvas-hint" id="canvas-hint">SENTUH & SERET OBJEK KE TONG YANG TEPAT</div></div>
+          <div class="canvas-wrap"><canvas id="game-canvas" aria-label="Area permainan memilah sampah. Seret objek ke tempat sampah yang sesuai."></canvas><div class="canvas-hint" id="canvas-hint">SENTUH & SERET OBJEK KE TEMPAT SAMPAH YANG SESUAI</div></div>
           <div class="scene-foot">
             <div class="progress-block"><div class="progress-meta"><span>PROGRES MISI</span><strong id="progress-percent">0%</strong></div><div class="progress-track"><span id="progress-fill"></span></div></div>
             <div class="remaining-chip"><span>TERSISA</span><strong id="remaining-count">1.000</strong></div>
@@ -57,10 +57,10 @@ root.innerHTML = `
             <div class="mini-stat-row"><div><small>BENAR</small><strong id="side-correct">0</strong></div><div><small>DITOLAK</small><strong id="side-wrong">0</strong></div><div><small>GELOMBANG</small><strong id="side-wave">0</strong></div></div>
           </section>
           <section class="side-card bins-card">
-            <div class="card-heading"><div><span class="mini-overline">KENALI WARNA WADAH</span><h2>3 Zona Pemilahan</h2></div><span class="bin-emoji">🗑️</span></div>
-            <div class="bin-legend legend-green"><span class="legend-icon">♻</span><div><strong>Hijau • Organik</strong><small>Sisa makanan, kulit buah, daun</small></div><span class="legend-arrow">→</span></div>
-            <div class="bin-legend legend-yellow"><span class="legend-icon">♻</span><div><strong>Kuning • Anorganik</strong><small>Botol, kaleng, bungkus makanan</small></div><span class="legend-arrow">→</span></div>
-            <div class="bin-legend legend-red"><span class="legend-icon">⚠</span><div><strong>Merah • B3</strong><small>Baterai, pecahan kaca, masker*</small></div><span class="legend-arrow">→</span></div>
+            <div class="card-heading"><div><span class="mini-overline">KENALI JENIS SAMPAH</span><h2>3 Zona Pemilahan</h2></div><span class="bin-emoji">🗑️</span></div>
+            <div class="bin-legend legend-green"><span class="legend-icon">♻</span><div><strong>Organik</strong><small>Sisa makanan, kulit buah, daun</small></div><span class="legend-arrow">→</span></div>
+            <div class="bin-legend legend-yellow"><span class="legend-icon">♻</span><div><strong>Anorganik</strong><small>Botol, kaleng, bungkus makanan</small></div><span class="legend-arrow">→</span></div>
+            <div class="bin-legend legend-red"><span class="legend-icon">⚠</span><div><strong>Sampah B3</strong><small>Baterai, pecahan kaca, masker*</small></div><span class="legend-arrow">→</span></div>
             <small class="source-note">*Contoh kelompok dalam materi pembelajaran.</small>
           </section>
           <section class="tip-card"><span class="tip-icon">💡</span><div><strong>Tips Detektif</strong><p id="tip-text">Amati bahan dan asal benda. Jangan hanya menebak dari warnanya!</p></div></section>
@@ -72,7 +72,7 @@ root.innerHTML = `
         <div class="r-list"><span><b>1R</b> Refuse</span><span><b>3R</b> Reduce • Reuse • Recycle</span></div>
         <div class="touch-note"><span>☝☝</span> Bisa dimainkan bersama dengan beberapa jari</div>
       </section>
-      <footer class="footer"><span>© ECOQUEST • MEDIA PEMBELAJARAN LINGKUNGAN</span><span>Belajar memilah • Beraksi nyata • Bumi terjaga</span></footer>
+      <footer class="footer"><span>© SMP IT SAHABAT ALAM • MEDIA PEMBELAJARAN LINGKUNGAN</span><span>Belajar memilah • Beraksi nyata • Bumi terjaga</span></footer>
     </main>
 
     <div class="modal-layer" id="start-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
@@ -96,7 +96,7 @@ root.innerHTML = `
     </div>
 
     <div class="modal-layer hidden" id="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title">
-      <div class="modal-card help-card"><button class="modal-close" id="close-help" aria-label="Tutup panduan">×</button><div class="eyebrow">CARA BERMAIN</div><h2 id="help-title">Jadi Detektif yang Cermat!</h2><div class="help-steps"><div><b>01</b><span><strong>Amati objek</strong><small>Perhatikan gambar dan nama sampah yang turun.</small></span></div><div><b>02</b><span><strong>Tarik dan lepaskan</strong><small>Sentuh objek, geser ke wadah, lalu lepaskan. Beberapa objek bisa digerakkan dengan beberapa jari.</small></span></div><div><b>03</b><span><strong>Perhatikan alarm</strong><small>Wadah menyala terang jika benar. Jika salah, wadah berkedip merah dan objek ditolak.</small></span></div><div><b>04</b><span><strong>Selesaikan semua gelombang</strong><small>Kumpulkan skor dan jaga akurasi setinggi mungkin.</small></span></div></div><div class="key-help"><span>1</span> Organik <span>2</span> Anorganik <span>3</span> B3 <small>Pilih objek lalu tekan angka pada keyboard.</small></div><button class="primary-button" id="close-help-button" type="button">MENGERTI <span>✓</span></button></div>
+      <div class="modal-card help-card"><button class="modal-close" id="close-help" aria-label="Tutup panduan">×</button><div class="eyebrow">CARA BERMAIN</div><h2 id="help-title">Jadi Detektif yang Cermat!</h2><div class="help-steps"><div><b>01</b><span><strong>Amati objek</strong><small>Perhatikan gambar dan nama sampah yang turun.</small></span></div><div><b>02</b><span><strong>Tarik dan lepaskan</strong><small>Sentuh objek, geser ke wadah, lalu lepaskan. Beberapa objek bisa digerakkan dengan beberapa jari.</small></span></div><div><b>03</b><span><strong>Perhatikan alarm</strong><small>Wadah menyala terang jika benar. Jika salah, wadah berkedip merah dan objek ditolak.</small></span></div><div><b>04</b><span><strong>Selesaikan semua gelombang</strong><small>Kumpulkan skor dan jaga akurasi setinggi mungkin.</small></span></div></div><div class="key-help"><span>1</span> Organik <span>2</span> Anorganik <span>3</span> Sampah B3 <small>Pilih objek lalu tekan angka pada keyboard.</small></div><button class="primary-button" id="close-help-button" type="button">MENGERTI <span>✓</span></button></div>
     </div>
 
     <div class="modal-layer hidden" id="lesson-modal" role="dialog" aria-modal="true" aria-labelledby="lesson-title">
@@ -105,7 +105,7 @@ root.innerHTML = `
         <p class="lesson-intro">Baca ringkasan materi, lalu buktikan pemahamanmu saat menjalankan misi pemilahan.</p>
         <div class="lesson-grid">
           <section class="lesson-box lesson-wide"><span class="lesson-label">01 • MENGENAL SAMPAH</span><h3>Apa itu sampah?</h3><p>Sisa kegiatan sehari-hari manusia atau proses alam yang berbentuk padat dan sudah tidak dipakai lagi. Sampah yang dipilah dapat menjadi sumber daya berharga.</p><div class="lesson-fact"><strong>0,7 kg</strong><span>Perkiraan sampah per siswa per hari sebagaimana dicantumkan dalam materi presentasi.</span></div></section>
-          <section class="lesson-box"><span class="lesson-label">02 • JENIS SAMPAH</span><h3>Tiga kelompok latihan</h3><div class="lesson-type type-green"><b>HIJAU • ORGANIK</b><small>Sisa nasi, kulit buah, daun kering, tisu.</small></div><div class="lesson-type type-yellow"><b>KUNING • ANORGANIK</b><small>Botol plastik, kaleng, bungkus makanan.</small></div><div class="lesson-type type-red"><b>MERAH • B3</b><small>Baterai bekas, pecahan kaca, masker (sesuai contoh pada materi).</small></div></section>
+          <section class="lesson-box"><span class="lesson-label">02 • JENIS SAMPAH</span><h3>Tiga kelompok latihan</h3><div class="lesson-type type-green"><b>ORGANIK</b><small>Sisa nasi, kulit buah, daun kering, tisu.</small></div><div class="lesson-type type-yellow"><b>ANORGANIK</b><small>Botol plastik, kaleng, bungkus makanan.</small></div><div class="lesson-type type-red"><b>SAMPAH B3</b><small>Baterai bekas, pecahan kaca, masker (sesuai contoh pada materi).</small></div></section>
           <section class="lesson-box"><span class="lesson-label">03 • LAMA TERURAI</span><h3>Berapa lama sampah menghilang?</h3><div class="decompose-row"><span>Kulit pisang & daun</span><b>2–6 minggu</b></div><div class="decompose-row"><span>Tisu & kardus</span><b>2–5 bulan</b></div><div class="decompose-row"><span>Kaleng minuman</span><b>80–200 tahun</b></div><div class="decompose-row"><span>Botol plastik & kresek</span><b>450–1.000 tahun</b></div><small class="lesson-source">Rentang waktu mengikuti tabel di materi pembelajaran.</small></section>
           <section class="lesson-box"><span class="lesson-label">04 • DAMPAK LINGKUNGAN</span><h3>Bahaya sampah</h3><ul><li><b>Banjir kota:</b> sampah menyumbat selokan dan sungai.</li><li><b>Pencemaran tanah:</b> air lindi dapat mencemari tanah dan air.</li><li><b>Pemanasan global:</b> pembusukan sampah organik dapat menghasilkan metana.</li><li><b>Kesehatan:</b> sampah dapat menjadi tempat berkembangnya organisme pembawa penyakit.</li><li><b>Asap berbahaya:</b> membakar plastik bukan cara aman mengelola sampah.</li></ul></section>
           <section class="lesson-box"><span class="lesson-label">05 • JADI BERKAH</span><h3>Manfaat sampah terpilah</h3><div class="benefit-list"><div><span>🌱</span><p><b>Pupuk kompos</b><small>Sisa dapur membantu menyuburkan tanaman.</small></p></div><div><span>🍊</span><p><b>Eco-enzyme</b><small>Kulit buah dapat diolah menjadi cairan serbaguna.</small></p></div><div><span>🏦</span><p><b>Bank sampah</b><small>Botol dan kardus dapat disalurkan untuk didaur ulang.</small></p></div><div><span>🎒</span><p><b>Karya kriya</b><small>Bahan kemasan dapat dimanfaatkan menjadi kerajinan.</small></p></div></div></section>
@@ -185,7 +185,7 @@ function updateUI(snapshot) {
   $('#side-wave').textContent = snapshot.wave;
   $('#pause-toggle').disabled = !['running', 'paused'].includes(snapshot.status);
   $('#pause-toggle').textContent = snapshot.status === 'paused' ? '▶ Lanjut' : 'Ⅱ Jeda';
-  $('#canvas-hint').textContent = snapshot.status === 'paused' ? 'MISI DIJEDA' : snapshot.status === 'running' ? 'SENTUH & SERET OBJEK KE TONG YANG TEPAT' : 'SIAP UNTUK MEMULAI MISI';
+  $('#canvas-hint').textContent = snapshot.status === 'paused' ? 'MISI DIJEDA' : snapshot.status === 'running' ? 'SENTUH & SERET OBJEK KE TEMPAT SAMPAH YANG SESUAI' : 'SIAP UNTUK MEMULAI MISI';
   $('#canvas-hint').classList.toggle('hint-paused', snapshot.status === 'paused');
 }
 

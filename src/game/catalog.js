@@ -11,7 +11,7 @@ export const CATEGORIES = {
     color: '#13b981',
     dark: '#08784f',
     light: '#ddf8ec',
-    binLabel: 'HIJAU',
+    binLabel: 'ORGANIK',
     description: 'Sampah mudah terurai yang berasal dari sisa makhluk hidup.',
     examples: 'Sisa makanan, kulit buah, daun, dan tisu.',
     action: 'Olah menjadi kompos atau eco-enzyme.'
@@ -23,7 +23,7 @@ export const CATEGORIES = {
     color: '#f5b51b',
     dark: '#9a6500',
     light: '#fff3c7',
-    binLabel: 'KUNING',
+    binLabel: 'ANORGANIK',
     description: 'Bahan yang umumnya lebih sulit terurai dan dapat dipilah untuk guna ulang atau daur ulang.',
     examples: 'Botol plastik, kaleng, bungkus makanan, dan kantong plastik.',
     action: 'Bersihkan, gunakan ulang, atau setorkan ke bank sampah.'
@@ -35,7 +35,7 @@ export const CATEGORIES = {
     color: '#ef5350',
     dark: '#a51e27',
     light: '#ffe3e2',
-    binLabel: 'MERAH',
+    binLabel: 'SAMPAH B3',
     description: 'Bahan atau benda yang memiliki karakteristik berbahaya dan perlu penanganan khusus.',
     examples: 'Baterai bekas dan benda yang berpotensi melukai atau terkontaminasi.',
     action: 'Pisahkan dan serahkan ke fasilitas/pengelola yang tepat. Jangan dibakar.'

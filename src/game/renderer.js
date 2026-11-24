@@ -73,7 +73,7 @@ function drawBackground(ctx, w, h, now) {
   roundedRect(ctx, 18, 76, w - 36, Math.max(175, groundY - 92), 22, 'rgba(255,255,255,.40)', 'rgba(255,255,255,.76)', 1.5);
   ctx.save(); ctx.setLineDash([6, 7]); roundedRect(ctx, 27, 85, w - 54, Math.max(157, groundY - 110), 18, null, 'rgba(66,147,157,.28)', 1); ctx.restore();
   ctx.fillStyle = 'rgba(46,113,121,.66)'; ctx.font = `800 ${Math.max(9, Math.min(12, w / 82))}px Nunito, sans-serif`; ctx.textAlign = 'left';
-  ctx.fillText('AREA HUJAN SAMPAH  •  SERET OBJEK KE TONG YANG TEPAT', 36, 65);
+  ctx.fillText('AREA HUJAN SAMPAH  •  SERET OBJEK KE TEMPAT SAMPAH YANG SESUAI', 36, 65);
   // wind swirls, moving subtly
   const sway = Math.sin(now / 900) * 3;
   ctx.strokeStyle = 'rgba(72,145,164,.22)'; ctx.lineWidth = 2;

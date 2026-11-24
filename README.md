@@ -1,6 +1,6 @@
 # DETEKTIF SAMPAH — Misi Pilah 1.000
 
-Game pembelajaran interaktif 2D untuk mengenal pemilahan **Organik, Anorganik, dan Sampah B3**. Dibuat dengan JavaScript modular + Vite agar mudah dikembangkan lewat GitHub/Codex dan dapat di-host sebagai situs statis di Vercel.
+Game pembelajaran interaktif 2D untuk mengenal pemilahan **Organik, Anorganik, dan Sampah B3**. Identitas sekolah menggunakan logo **SMP IT Sahabat Alam** dan latar antarmuka biru langit. Dibuat dengan JavaScript modular + Vite agar mudah dikembangkan lewat GitHub/Codex dan dapat di-host sebagai situs statis di Vercel.
 
 ## Fitur utama
 
@@ -16,15 +16,18 @@ Game pembelajaran interaktif 2D untuk mengenal pemilahan **Organik, Anorganik, d
 ## Teknologi dan struktur
 
 ```text
+public/
+└── logo.jpg              # logo SMP IT Sahabat Alam
 src/
-├── main.js              # UI, input pointer/multi-touch, audio, fullscreen, statistik
-├── style.css            # tampilan responsif desktop, tablet, dan layar PID
+├── main.js               # UI, input pointer/multi-touch, audio, fullscreen, statistik
+├── style.css             # tampilan responsif desktop, tablet, dan layar PID
 └── game/
-    ├── catalog.js       # katalog benda, kategori, penjelasan, dan komposisi latihan
-    ├── engine.js        # manifest 1.000 item, gelombang, validasi, skor, progres, drag sessions
-    └── renderer.js      # gambar lingkungan sekolah, benda, tempat sampah, dan efek di Canvas 2D
+    ├── catalog.js        # katalog benda, kategori, penjelasan, dan komposisi latihan
+    ├── engine.js         # manifest 1.000 item, gelombang, validasi, skor, progres, drag sessions
+    └── renderer.js       # gambar lingkungan sekolah, benda, tempat sampah, dan efek di Canvas 2D
 index.html
 package.json
+vercel.json
 ```
 
 ### Mengapa logika memakai JavaScript?
@@ -35,7 +38,7 @@ Proyek ini ditujukan untuk **Vercel Free sebagai web statis**. Seluruh logika ga
 
 Komposisi awal untuk tantangan adalah **40% Organik, 50% Anorganik, dan 10% B3**. Ini adalah rasio simulasi untuk latihan game, **bukan statistik resmi timbulan sampah Indonesia**. Ubah `DEFAULT_DISTRIBUTION` dalam `src/game/catalog.js` untuk menyesuaikan skenario latihan.
 
-Warna wadah dalam game: hijau untuk Organik, kuning untuk Anorganik, merah untuk B3. Warna dan sistem pemilahan dapat berbeda sesuai peraturan daerah atau fasilitas pengelola sampah. Kategori beberapa contoh pada game mengikuti materi pembelajaran yang diberikan; untuk praktik nyata, ikuti petunjuk pengelola sampah setempat. Pecahan kaca juga perlu ditangani dengan hati-hati agar tidak melukai.
+Warna wadah dalam game: hijau untuk **Organik**, kuning untuk **Anorganik**, merah untuk **Sampah B3**. Nama kategori ditampilkan pada label wadah; warna tetap menjadi pembeda visual. Warna dan sistem pemilahan dapat berbeda sesuai peraturan daerah atau fasilitas pengelola sampah. Kategori beberapa contoh pada game mengikuti materi pembelajaran yang diberikan; untuk praktik nyata, ikuti petunjuk pengelola sampah setempat. Pecahan kaca juga perlu ditangani dengan hati-hati agar tidak melukai.
 
 ## Menjalankan di Windows 11
 
